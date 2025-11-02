@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           <span className="text-2xl font-extrabold text-[#2a2e6e] tracking-wide hidden sm:block drop-shadow-lg">
             VNR202 - GD1708
           </span>
-        </Link>
+        </Link> 
         <nav className="hidden md:flex gap-2 lg:gap-6">
           {menu.map((item) => (
             <Link

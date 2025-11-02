@@ -3,8 +3,8 @@ import { GeminiClient } from "../services/GeminiClient";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 
-// ⚠️ Khuyến nghị: dùng biến môi trường cho API key
-const gemini = new GeminiClient("AIzaSyBOyExUS1i0kvI7jhV7MuYl1na1nLI4wNg");
+// Sử dụng biến môi trường từ file .env
+const gemini = new GeminiClient(import.meta.env.VITE_GEMINI_API_KEY);
 
 const VoiceChatbot: React.FC = () => {
   const [input, setInput] = useState("");
