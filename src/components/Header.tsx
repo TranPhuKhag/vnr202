@@ -4,7 +4,22 @@ import { motion } from "framer-motion";
 import Logo from "../../public/logo.webp";
 
 const menu = [
-  { label: "Home", to: "/intro" },
+  {
+    label: "ĐH8&9",
+    to: "/dai-hoi-8-9",
+  },
+  {
+    label: "GĐ 1",
+    to: "/giai-doan-1",
+  },
+  {
+    label: "GĐ 2",
+    to: "/giai-doan-2",
+  },
+  {
+    label: "GĐ 3",
+    to: "/giai-doan-3",
+  },
   { label: "Quiz", to: "/quiz" },
   { label: "Chatbot", to: "/chatbot" },
   { label: "AI Usage", to: "/ai-usage" },
@@ -27,7 +42,7 @@ const Header: React.FC = () => {
           <span className="text-2xl font-extrabold text-[#2a2e6e] tracking-wide hidden sm:block drop-shadow-lg">
             VNR202 - GD1708
           </span>
-        </Link> 
+        </Link>
         <nav className="hidden md:flex gap-2 lg:gap-6">
           {menu.map((item) => (
             <Link
