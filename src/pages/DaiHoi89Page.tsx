@@ -70,6 +70,7 @@ const DaiHoi89Page: React.FC = () => {
                   💡 Yêu cầu đổi mới
                 </p>
                 <p className="text-sm text-gray-700 mt-1">
+
                   Đổi mới toàn diện những thứ trong lĩnh vực kinh tế, chính trị, xã
                   hội và tập trung giải quyết mấu chốt tạo nền tảng phát triển.
                 </p>
@@ -83,17 +84,16 @@ const DaiHoi89Page: React.FC = () => {
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
                   <span>
-                    Phong trào cải tổ ở Liên Xô và Đông Âu đã đạt kết quả cấm chính
-                    đường lối của chúng tôi.
+                    Phong trào cải tổ ở Liên Xô và Đông Âu ngày càng rơi vào khủng hoảng kinh tế toàn diện(12-1991)
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>Cuộc sống lan truyền tràng theo và hội nhập kinh tế quốc tế.</span>
+                  <span>Bị các đế quốc và thế lực thù địch bao vây, cấm vận.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>Mở rộng xu thế hợp tác và hội nhập kinh tế quốc tế.</span>
+                  <span> Mở rộng xu thế hợp tác và hội nhập kinh tế quốc tế.</span>
                 </li>
               </ul>
 
@@ -150,11 +150,11 @@ const DaiHoi89Page: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-4">
             <div>
               <h3 className="font-semibold text-gray-800 mb-2">
-                Nội dung trọng đại hội làm nay
+                Nội dung trọng đại hội lần này
               </h3>
               <p className="text-sm text-gray-700 leading-relaxed">
                 Đánh giá đúng sự thật, nói rõ sự thật, nghiêm túc kiểm điểm, chỉ rõ
-                những sai lầm nghiêm trọng.
+                những sai lầm nghiêm trọng và kéo dài trong giai đoạn 1975-1986
               </p>
             </div>
             <div>
@@ -162,8 +162,8 @@ const DaiHoi89Page: React.FC = () => {
                 Khuynh hướng tư tưởng chủ yếu
               </h3>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Nhận mạnh khắc phục bệnh chủ quan, duy ý chí, chuyển sang tôn trọng
-                quy luật khách quan, đảng bộ của cơ hoạch đạo tồng dịnh hướng XHCN.
+                Nhận mạnh khắc phục bệnh chủ quan duy ý chí, lối suy nghĩ và hành động giản đơn, nóng vội,chạy theo nguyện vọng chủ quan
+
               </p>
             </div>
           </div>
@@ -174,25 +174,25 @@ const DaiHoi89Page: React.FC = () => {
               <li className="flex items-start gap-2">
                 <span className="font-bold">•</span>
                 <span>
-                  Đánh giá mục tiêu, lập kế chuẩn khóa và CXHH.
+    1. Quán triệt tư tưởng "lấy dân làm gốc".
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="font-bold">•</span>
                 <span>
-                  Đổi mới phải triển khai, đổng bộ, có trọng tầm, có phương hợp.
+    2. Luôn luôn xuất phát từ thực tế, tôn trọng và hành động theo quy luật khách quan.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="font-bold">•</span>
                 <span>
-                  Lấy nhận dân làm trung tâm, phát huy quyền làm chủ.
+    3. Kết hợp sức mạnh dân tộc với sức mạnh thời đại trong điều kiện mới.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="font-bold">•</span>
                 <span>
-                  Tăng cường xây dựng Đảng trong sạch, vững mạnh.
+    4. Chăm lo xây dựng Đảng ngang tầm với một đảng cầm quyền lãnh đạo nhân dân tiến hành cách mạng xã hội chủ nghĩa.
                 </span>
               </li>
             </ul>
@@ -232,7 +232,7 @@ const DaiHoi89Page: React.FC = () => {
 
             <div className="bg-blue-50 rounded-xl p-4">
               <p className="text-sm text-blue-900">
-                Điều chỉnh cơ cấu sản xuất theo hướng ưu tiên nông nghiệp, hàng tiêu dùng và xuất khẩu; khuyến khích sản xuất hàng hóa.
+                Điều chỉnh cơ cấu sản xuất theo hướng ưu tiên nông nghiệp, công nghiệp nhẹ và công nghiệp nặng.
               </p>
             </div>
           </div>
@@ -253,8 +253,7 @@ const DaiHoi89Page: React.FC = () => {
                 Luật Đầu tư nước ngoài
               </h4>
               <p className="text-sm text-gray-700">
-                Ban hành 12/1987; mở cửa thu hút nước ngoài, công nghệ và quản lý từ bên ngoài.
-              </p>
+Lần đầu tiên Luật Đầu tư nước ngoài được Quốc hội thông qua và có hiệu lực từ ngày 1-1-1988, mở đường cho việc thu hút vốn đầu tư nước ngoài.              </p>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl p-4">
@@ -262,7 +261,7 @@ const DaiHoi89Page: React.FC = () => {
                 Giải quyết lưu thông phân phối
               </h4>
               <p className="text-sm text-gray-700">
-                Thực hiện "bốn giảm": giảm cấp, giảm bao cấp giá – kênh – tiền, giảm độc quyền, giảm thu hút.
+                Thực hiện "bốn giảm": Giảm bội chi ngân sách, giảm nhịp độ tăng giá, giảm lạm phát, giảm khó khăn về đời sống của nhân dân.
               </p>
             </div>
           </div>
@@ -277,7 +276,7 @@ const DaiHoi89Page: React.FC = () => {
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600">•</span>
-                  <span>Tư duy chính trị (Hội nghị T.Ư 6).</span>
+                  <span>Tư duy chính trị (Hội nghị Ương 6 (3/1989) ).</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600">•</span>
@@ -285,11 +284,11 @@ const DaiHoi89Page: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600">•</span>
-                  <span>Xây dựng Nhà nước pháp quyền (Hội nghị giữa nhiệm kỳ).</span>
+                  <span>Xây dựng Nhà nước pháp quyền (Hội nghị giữa nhiệm kỳ (1/1994) ).</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600">•</span>
-                  <span>Xây dựng Đảng (Hội nghị T.Ư 3).</span>
+                  <span>Xây dựng Đảng (Hội nghị Trung ương 3 (6/1992) ).</span>
                 </li>
               </ul>
             </div>
@@ -306,11 +305,11 @@ const DaiHoi89Page: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600">•</span>
-                  <span>Thành viên đầy đủ của ASEAN (1995).</span>
+                  <span> Trở thành thành viên đầy đủ của ASEAN (1995).</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600">•</span>
-                  <span>Thiết lập quan hệ ngoại giao với Hoa Kỳ (1995).</span>
+                  <span>Thiết lập quan hệ ngoại giao với Hoa Kỳ (11-7-1995).</span>
                 </li>
               </ul>
             </div>
@@ -335,7 +334,8 @@ const DaiHoi89Page: React.FC = () => {
 
           <div className="bg-blue-50 rounded-xl p-4 mb-6">
             <p className="text-sm text-blue-900 leading-relaxed">
-              Đất nước ra khỏi khủng hoảng kinh tế – xã hội, nhưng một số mặt còn chưa vững chắc.
+              Đất nước ra khỏi khủng hoảng kinh tế – xã hội, nhưng một số mặt còn chưa vững chắc. Con đường đi lên chủ nghĩa xã hội ngày càng được xác định rõ hơn.
+
             </p>
           </div>
 
@@ -347,13 +347,16 @@ const DaiHoi89Page: React.FC = () => {
               </div>
               <div className="text-sm text-gray-700">
                 Kinh tế tăng trưởng ổn, có xu hướng theo định hướng XHCN.
+</div>
+                              <div className="text-sm text-gray-700">
+                Lạm phát từ mức 67,1% năm 1991 giảm xuống còn 12,7% năm 1995.
               </div>
             </div>
 
             <div className="bg-blue-50 rounded-xl p-5">
               <div className="text-3xl font-bold text-blue-700 mb-2">Lương thực</div>
               <div className="text-base font-bold text-blue-900 mb-2">
-                Tự thiếu sang dư, có dư trữ và xuất khẩu.
+                Từ thiếu sang dư, có dư trữ và xuất khẩu.
               </div>
               <div className="text-sm text-gray-700">
                 Bước đầu bảo đảm an ninh lương thực quốc gia.
