@@ -1,12 +1,383 @@
 import React from "react";
+import { motion } from "framer-motion";
+import daihoiVIImage from "../assets/daihoiVI.png";
+import aseanImage from "../assets/ASEAN.jpg";
 
 const DaiHoi89Page: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-2xl font-bold">
-        Đại hội VIII (1996) & Đại hội IX (2001)
-      </h1>
-      <p className="mt-4 text-gray-600">Nội dung trang sẽ được thêm sau.</p>
+    <div className="bg-gradient-to-b from-blue-50 to-gray-100 min-h-screen overflow-x-hidden">
+      <div className="container mx-auto px-4 py-16">
+        {/* Header */}
+        <motion.header
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-20"
+        >
+          <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-cyan-600 mb-4">
+Đổi mới toàn diện, đưa đất nước ra khỏi khủng hoảng kinh tế - xã hội 1986 - 1996          </h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-lg text-gray-600 max-w-3xl mx-auto"
+          >
+            {/* Thời kỳ bản lề với những bước tiến vượt bậc trong hội nhập quốc tế */}
+            {/* và sự phát triển, hoàn thiện tư duy lý luận của Đảng. */}
+          </motion.p>
+        </motion.header>
+
+        {/* Section 1: Bối cảnh cuối năm 1986 */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
+          <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+            <span className="text-blue-600">📅</span>
+            1. Bối cảnh cuối năm 1986
+          </h2>
+
+          <div className="bg-blue-50 rounded-xl p-4 mb-4">
+            <p className="text-sm text-gray-700 leading-relaxed">
+              Tổng quan: Đất nước đang trước những hoang kinh tế – xã hội, yêu cầu
+              cấp bách phải đổi mới tư duy và phương thức quản lý.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Left column */}
+            <div>
+              <h3 className="font-bold text-gray-800 mb-3">
+                Đất nước lâm vào khủng hoảng kinh tế – xã hội nghiêm trọng
+              </h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span>
+                    Lạm phát cao kinh dị, sản xuất đình đốn, đời sống nhân dân vô cùng
+                    khó khăn.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span>Cơ chế bao cấp kiềm hãm quá, phân phối bất hợp lý.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span>Hệ thống quản lý tập trung, quan liêu.</span>
+                </li>
+              </ul>
+
+              <div className="mt-4 bg-blue-100 rounded-lg p-4">
+                <p className="text-sm font-semibold text-blue-900">
+                  💡 Yêu cầu đổi mới
+                </p>
+                <p className="text-sm text-gray-700 mt-1">
+                  Đổi mới toàn diện những thứ trong lĩnh vực kinh tế, chính trị, xã
+                  hội và tập trung giải quyết mấu chốt tạo nền tảng phát triển.
+                </p>
+              </div>
+            </div>
+
+            {/* Right column */}
+            <div>
+              <h3 className="font-bold text-gray-800 mb-3">Về mặt quốc tế</h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span>
+                    Phong trào cải tổ ở Liên Xô và Đông Âu đã đạt kết quả cấm chính
+                    đường lối của chúng tôi.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span>Cuộc sống lan truyền tràng theo và hội nhập kinh tế quốc tế.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span>Mở rộng xu thế hợp tác và hội nhập kinh tế quốc tế.</span>
+                </li>
+              </ul>
+
+              <div className="mt-4 bg-gray-100 rounded-xl overflow-hidden">
+                <img
+                  src={daihoiVIImage}
+                  alt="Vietnam street scene"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 2: Đại hội VI */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
+          <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+            <span className="text-blue-600">🏛️</span>
+            2. Đại hội VI (12/1986) – Khởi xướng Đường lối Đổi mới
+          </h2>
+
+          <div className="bg-blue-50 rounded-xl p-4 mb-4">
+            <p className="text-sm text-gray-700 leading-relaxed">
+              Đại hội khẳng định yếu cầu đổi mới toàn tư duy, có chế quản lý, đề ra
+              đường lối đổi mới toàn diện, trước hết là đổi mới kinh tế.
+            </p>
+          </div>
+
+          {/* Statistics */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
+            <div className="bg-blue-50 rounded-lg p-3 text-center">
+              <div className="text-2xl font-bold text-blue-700">1.129</div>
+              <div className="text-xs text-gray-600">Đại biểu</div>
+            </div>
+            <div className="bg-blue-50 rounded-lg p-3 text-center">
+              <div className="text-2xl font-bold text-blue-700">~1,9 triệu</div>
+              <div className="text-xs text-gray-600">Đảng viên</div>
+            </div>
+            <div className="bg-blue-50 rounded-lg p-3 text-center">
+              <div className="text-2xl font-bold text-blue-700">&gt;30</div>
+              <div className="text-xs text-gray-600">Đoàn quốc tế</div>
+            </div>
+            <div className="bg-blue-50 rounded-lg p-3 text-center">
+              <div className="text-2xl font-bold text-blue-700">124</div>
+              <div className="text-xs text-gray-600">Ủy viên T.Ư</div>
+            </div>
+            <div className="bg-blue-50 rounded-lg p-3 text-center">
+              <div className="text-xl font-bold text-blue-700">Tổng Bí thư</div>
+              <div className="text-xs text-gray-600">Trương Chính (đến 12/1986)</div>
+              <div className="text-xs text-gray-600">+ Nguyễn Văn Linh</div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-4">
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">
+                Nội dung trọng đại hội làm nay
+              </h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Đánh giá đúng sự thật, nói rõ sự thật, nghiêm túc kiểm điểm, chỉ rõ
+                những sai lầm nghiêm trọng.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">
+                Khuynh hướng tư tưởng chủ yếu
+              </h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Nhận mạnh khắc phục bệnh chủ quan, duy ý chí, chuyển sang tôn trọng
+                quy luật khách quan, đảng bộ của cơ hoạch đạo tồng dịnh hướng XHCN.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-blue-600 rounded-xl p-4">
+            <h3 className="text-white font-bold mb-3">Bốn bài học quý báu</h3>
+            <ul className="space-y-2 text-sm text-white">
+              <li className="flex items-start gap-2">
+                <span className="font-bold">•</span>
+                <span>
+                  Đánh giá mục tiêu, lập kế chuẩn khóa và CXHH.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="font-bold">•</span>
+                <span>
+                  Đổi mới phải triển khai, đổng bộ, có trọng tầm, có phương hợp.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="font-bold">•</span>
+                <span>
+                  Lấy nhận dân làm trung tâm, phát huy quyền làm chủ.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="font-bold">•</span>
+                <span>
+                  Tăng cường xây dựng Đảng trong sạch, vững mạnh.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Section 3: Nội dung cơ bản */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
+          <h2 className="text-xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+            <span className="text-blue-600">📊</span>
+            3. Nội dung cơ bản của công cuộc Đổi mới (1986-1996)
+          </h2>
+
+          {/* 3.1 */}
+          <div className="mb-6">
+            <h3 className="text-base font-bold text-blue-800 mb-3">
+              3.1. Đổi mới tư duy và chính sách kinh tế
+            </h3>
+            <ul className="space-y-2 text-sm text-gray-700 mb-3">
+              <li className="flex items-start gap-2">
+                <span className="text-blue-600">☑</span>
+                <span>Phát triển nhiều thành phần kinh tế.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-blue-600">☑</span>
+                <span>
+                  Cơ chế quản lý: xóa bỏ tập trung quan liêu, hành chính, bao cấp.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-blue-600">☑</span>
+                <span>
+                  Ba chương trình kinh tế lớn: lương thực – thực phẩm, hàng tiêu dùng, hàng xuất khẩu.
+                </span>
+              </li>
+            </ul>
+
+            <div className="bg-blue-50 rounded-xl p-4">
+              <p className="text-sm text-blue-900">
+                Điều chỉnh cơ cấu sản xuất theo hướng ưu tiên nông nghiệp, hàng tiêu dùng và xuất khẩu; khuyến khích sản xuất hàng hóa.
+              </p>
+            </div>
+          </div>
+
+          {/* 3.2 - Three cards in a row */}
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-white border border-gray-200 rounded-xl p-4">
+              <h4 className="font-bold text-blue-900 mb-2">
+                Nghị quyết 10 (4/1988) – Khoán 10
+              </h4>
+              <p className="text-sm text-gray-700">
+                Giao quyền tự chủ cho hộ nông dân; khoán sản phẩm đến nhóm/hộ; tạo bước đột phá năng suất.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-4">
+              <h4 className="font-bold text-blue-900 mb-2">
+                Luật Đầu tư nước ngoài
+              </h4>
+              <p className="text-sm text-gray-700">
+                Ban hành 12/1987; mở cửa thu hút nước ngoài, công nghệ và quản lý từ bên ngoài.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-4">
+              <h4 className="font-bold text-blue-900 mb-2">
+                Giải quyết lưu thông phân phối
+              </h4>
+              <p className="text-sm text-gray-700">
+                Thực hiện "bốn giảm": giảm cấp, giảm bao cấp giá – kênh – tiền, giảm độc quyền, giảm thu hút.
+              </p>
+            </div>
+          </div>
+
+          {/* 3.3 and 3.4 side by side */}
+          <div className="grid md:grid-cols-2 gap-6 mb-4">
+            {/* 3.3 */}
+            <div>
+              <h3 className="text-base font-bold text-blue-800 mb-3">
+                3.3. Đổi mới hệ thống chính trị và tư tưởng
+              </h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600">•</span>
+                  <span>Tư duy chính trị (Hội nghị T.Ư 6).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600">•</span>
+                  <span>Cương lĩnh 1991 (Đại hội VII).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600">•</span>
+                  <span>Xây dựng Nhà nước pháp quyền (Hội nghị giữa nhiệm kỳ).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600">•</span>
+                  <span>Xây dựng Đảng (Hội nghị T.Ư 3).</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 3.4 */}
+            <div>
+              <h3 className="text-base font-bold text-blue-800 mb-3">
+                3.4. Mở rộng quan hệ đối ngoại
+              </h3>
+              <ul className="space-y-2 text-sm text-gray-700 mb-3">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600">•</span>
+                  <span>Việt Nam – Trung Quốc bình thường hóa (1991).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600">•</span>
+                  <span>Thành viên đầy đủ của ASEAN (1995).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600">•</span>
+                  <span>Thiết lập quan hệ ngoại giao với Hoa Kỳ (1995).</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Large ASEAN Image */}
+          <div className="bg-gray-100 rounded-xl overflow-hidden mb-4">
+            <img
+              src={aseanImage}
+              alt="Vietnam gia nhập ASEAN 1995"
+              className="w-full h-80 object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Section 4: Kết thúc giai đoạn */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
+          <h2 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+            <span className="text-2xl">�</span>
+            4. Kết thúc giai đoạn 1986–1996: Những thành tựu đạt được
+          </h2>
+
+          <div className="bg-blue-50 rounded-xl p-4 mb-6">
+            <p className="text-sm text-blue-900 leading-relaxed">
+              Đất nước ra khỏi khủng hoảng kinh tế – xã hội, nhưng một số mặt còn chưa vững chắc.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-blue-50 rounded-xl p-5">
+              <div className="text-3xl font-bold text-blue-700 mb-2">8,2%</div>
+              <div className="text-base font-bold text-blue-900 mb-2">
+                Kinh tế: tăng trưởng GDP; lạm phát giảm mạnh.
+              </div>
+              <div className="text-sm text-gray-700">
+                Kinh tế tăng trưởng ổn, có xu hướng theo định hướng XHCN.
+              </div>
+            </div>
+
+            <div className="bg-blue-50 rounded-xl p-5">
+              <div className="text-3xl font-bold text-blue-700 mb-2">Lương thực</div>
+              <div className="text-base font-bold text-blue-900 mb-2">
+                Tự thiếu sang dư, có dư trữ và xuất khẩu.
+              </div>
+              <div className="text-sm text-gray-700">
+                Bước đầu bảo đảm an ninh lương thực quốc gia.
+              </div>
+            </div>
+
+            <div className="bg-blue-50 rounded-xl p-5">
+              <div className="text-3xl font-bold text-blue-700 mb-2">Cơ chế thị trường</div>
+              <div className="text-base font-bold text-blue-900 mb-2">
+                Bước đầu hình thành, vẫn hành theo định hướng XHCN.
+              </div>
+              <div className="text-sm text-gray-700">
+                Mở cửa, hội nhập kinh tế quốc tế.
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 rounded-xl p-5">
+            <p className="text-sm text-blue-900 leading-relaxed">
+              <strong>Tổng kết:</strong> Giai đoạn 1986-1996 đặt nền móng cho chuyển đổi sang kinh tế thị trường định hướng XHCN, tạo tiền đề hội nhập và phát triển bền vững các giai đoạn tiếp theo.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
