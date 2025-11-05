@@ -20,6 +20,10 @@ const menu = [
     label: "GĐ 3",
     to: "/giai-doan-3",
   },
+  {
+    label: "Thành Tựu",
+    to: "/thanh-tuu",
+  },
   { label: "Quiz", to: "/quiz" },
   { label: "Chatbot", to: "/chatbot" },
   { label: "AI Usage", to: "/ai-usage" },
