@@ -1,24 +1,19 @@
 // src/pages/ThanhTuuDoiMoiPage.tsx
 
-import React from "react";
+import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import type { Variants } from "framer-motion";
 import {
   FaWarehouse,
   FaTimesCircle,
   FaChartLine,
   FaGlobeAmericas,
-  FaIndustry,
-  FaBuilding,
-  FaHandshake,
-  FaStar,
-  FaPlaneDeparture,
   FaShoppingCart,
   FaLightbulb,
   FaMapMarkedAlt,
   FaRocket,
   FaAward,
 } from "react-icons/fa";
-import { useRef } from "react";
 
 // Import các ảnh của bạn
 import temphieu from "../assets/temphieu.png";
@@ -63,21 +58,25 @@ const StatCard: React.FC<{
 };
 
 const ThanhTuuDoiMoiPage: React.FC = () => {
-  const sectionVariants = {
+  const sectionVariants: Variants = {
     hidden: { opacity: 0, x: -100 },
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.7, type: "spring" },
+      transition: { duration: 0.7, type: "spring" as const },
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.5 } 
+    },
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
