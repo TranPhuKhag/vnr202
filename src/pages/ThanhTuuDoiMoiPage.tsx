@@ -21,6 +21,7 @@ import xephang from "../assets/xephang.png";
 import muahang from "../assets/muahang.png";
 import landmark from "../assets/landmark.png";
 import apec from "../assets/apec.png";
+import sap from "../assets/sap.png";
 
 // Import các component chart
 import GdpBarChart from "../components/GdpBarChart";
@@ -69,10 +70,10 @@ const ThanhTuuDoiMoiPage: React.FC = () => {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.5 } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
     },
   };
 
@@ -192,7 +193,7 @@ const ThanhTuuDoiMoiPage: React.FC = () => {
         {/* --- Phần 2: LUẬN CỨ CHO NHẬN ĐỊNH (HIỆN TẠI) --- */}
         <section className="mb-16 bg-gradient-to-b from-blue-50 to-indigo-100 rounded-2xl p-8 md:p-12 shadow-xl">
           <h2 className="text-3xl font-bold text-blue-800 mb-12 text-center">
-            Luận cứ: "Cơ đồ, Tiềm lực, Vị thế, Uy tín" ngày nay
+            "Cơ đồ, Tiềm lực, Vị thế, Uy tín" ngày nay
           </h2>
 
           {/* 1. CƠ ĐỒ & TIỀM LỰC (KINH TẾ) */}
@@ -232,11 +233,20 @@ const ThanhTuuDoiMoiPage: React.FC = () => {
               </div>
 
               {/* ẢNH LANDMARK (Đã di chuyển vào đây) */}
-              <img
-                src={landmark}
-                alt="Landmark 81"
-                className="rounded-xl shadow-lg w-full h-auto object-cover mt-8" // Thêm mt-8
-              />
+              <div className="mt-8">
+                <img
+                  src={landmark}
+                  alt="Landmark 81"
+                  className="rounded-xl shadow-lg w-full h-auto object-cover"
+                />
+
+                {/* Ảnh bổ sung (sap.png) hiển thị bên dưới Landmark để lấp khoảng trống */}
+                <img
+                  src={sap}
+                  alt="Sơ đồ hoặc biểu đồ phụ"
+                  className="rounded-xl shadow-lg mt-6 w-full md:w-full lg:w-full mx-auto h-56 md:h-64 lg:h-72 object-cover"
+                />
+              </div>
             </motion.div>
 
             {/* --- CỘT PHẢI: Biểu đồ + Thẻ Thông số --- */}
