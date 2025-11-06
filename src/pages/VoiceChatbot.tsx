@@ -1,6 +1,8 @@
+// src/components/VoiceChatbot.tsx
+
 import { useState, useRef } from "react";
 import { GeminiClient } from "../services/GeminiClient";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion"; // Đảm bảo đã import motion
 import ReactMarkdown from "react-markdown";
 
 // Sử dụng biến môi trường từ file .env
@@ -50,7 +52,7 @@ const VoiceChatbot: React.FC = () => {
 
   const baseGuidelines = `
 Bạn là trợ lý học thuật cho *môn Lịch sử Đảng Cộng Sản Việt Nam*. 
-• Cơ sở tham chiếu chính: **giáo trình lịch sử đảng cộng sản việt nam 2021**.
+• Cơ sở tham chiếu chính: **Giáo trình Tư tưởng Hồ Chí Minh 2019**.
 • Nếu câu hỏi nằm ngoài giáo trình, hãy trả lời ngắn gọn theo kiến thức nền tảng, và nói rõ là “nội dung ngoài giáo trình”. Nếu không chắc chắn thì nói “mình chưa có đủ căn cứ trong giáo trình”.
 • Không bịa đặt, không suy diễn quá mức, không đưa số liệu/ trích dẫn nếu không chắc chắn.
 • Trả lời hoàn toàn bằng **tiếng Việt**, ưu tiên **ngắn gọn – súc tích – dễ hiểu**, dùng **Markdown** gọn gàng.
@@ -127,10 +129,20 @@ ${input}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
-        <h2 className="text-2xl font-bold mb-1 text-gray-800 text-center">
-          Chatbot AI – Lịch sử Đảng Cộng Sản Việt Nam
-        </h2>
-        <p className="text-center text-gray-500 text-sm mb-4">
+        {/* --- TIÊU ĐỀ ĐÃ CHUYỂN VÀO ĐÂY --- */}
+        <motion.h2
+          className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#2a2e6e] via-[#6e7fdc] to-[#3a3f8f] mb-4 text-center drop-shadow" // Giảm mb-8 xuống mb-4
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          Chatbot hỏi đáp Lịch sử Đảng
+        </motion.h2>
+        {/* --- HẾT TIÊU ĐỀ --- */}
+
+        <p className="text-center text-gray-500 text-sm mb-6">
+          {" "}
+          {/* Tăng mb-4 lên mb-6 */}
           Ưu tiên trả lời theo <i>Lịch sử Đảng Cộng Sản Việt Nam</i>; có thể nêu
           rõ Chương/Mục khi trích dẫn.
         </p>
