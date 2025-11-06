@@ -11,453 +11,501 @@ interface QuizQuestion {
     isCorrect: boolean;
   }[];
   hint: string;
+  source: string;
 }
 
 const questions: QuizQuestion[] = [
   {
     questionNumber: 1,
     question:
-      "Theo Luật Phòng, chống tham nhũng năm 2005, tham nhũng được định nghĩa là gì?",
+      "Nhiệm vụ đầu tiên, bức thiết nhất ngay sau Đại thắng mùa Xuân 1975 là gì?",
     imageUrl: null,
     answerOptions: [
       {
-        text: "Hành vi lợi dụng mối quan hệ xã hội để mưu cầu lợi ích cá nhân",
+        text: "Hoàn thành thống nhất đất nước về mặt nhà nước.",
         rationale:
-          "Sai. Định nghĩa trong luật gắn với người có chức vụ, quyền hạn.",
-        isCorrect: false,
-      },
-      {
-        text: "Hành vi của người có chức vụ, quyền hạn đã lợi dụng chức vụ, quyền hạn đó vì vụ lợi",
-        rationale:
-          "Đúng. Đây là định nghĩa chính thức trong Luật PCTN 2005: lợi dụng chức vụ, quyền hạn vì vụ lợi.",
+          "Đúng. Sau 30/4/1975, yêu cầu cấp bách là thống nhất về mặt nhà nước để hợp nhất bộ máy, pháp lý và chủ quyền.",
         isCorrect: true,
       },
       {
-        text: "Hành vi làm thất thoát ngân sách nhà nước",
+        text: "Tiến hành cải tạo xã hội chủ nghĩa ở miền Nam.",
         rationale:
-          "Sai. Đây là hậu quả có thể có, không phải là định nghĩa pháp lý đầy đủ.",
+          "Sai. Cải tạo xã hội chủ nghĩa là nhiệm vụ quan trọng nhưng không phải bước bức thiết đầu tiên.",
         isCorrect: false,
       },
       {
-        text: "Hành vi quan liêu, cửa quyền",
+        text: "Khắc phục hậu quả nặng nề của chiến tranh.",
         rationale:
-          "Sai. Quan liêu, cửa quyền là biểu hiện lệch lạc trong quản lý, không đồng nhất với tham nhũng theo định nghĩa luật.",
+          "Sai. Đây là nhiệm vụ lớn, lâu dài; nhưng trước hết cần thống nhất nhà nước.",
+        isCorrect: false,
+      },
+      {
+        text: "Chuẩn bị cho Đại hội đại biểu toàn quốc lần thứ IV.",
+        rationale:
+          "Sai. Đại hội IV (12/1976) là mốc quan trọng nhưng diễn ra sau khi thống nhất nhà nước.",
         isCorrect: false,
       },
     ],
-    hint: "Tham nhũng gắn liền với người có chức vụ, quyền hạn.",
+    hint: "Từ khóa: thống nhất về mặt nhà nước sau 1975.",
+    source: "Giáo trình VNR202 – Chương 3 (1975–1986): Thống nhất đất nước",
   },
   {
     questionNumber: 2,
-    question: "Hồ Chí Minh coi tham ô, lãng phí, quan liêu là gì?",
+    question:
+      'Hội nghị nào của Ban Chấp hành Trung ương Đảng (khóa III) tháng 8-1975 chủ trương: "Hoàn thành thống nhất nước nhà, đưa cả nước tiến nhanh, tiến mạnh, tiến vững chắc lên Chủ nghĩa xã hội"?',
     imageUrl: null,
     answerOptions: [
       {
-        text: "Sai lầm trong quản lý",
-        rationale: "Sai. Mức độ không chỉ là sai lầm kỹ thuật.",
-        isCorrect: false,
-      },
-      {
-        text: "Hệ quả tất yếu của phát triển kinh tế",
-        rationale: "Sai. Không phải quy luật tất yếu.",
-        isCorrect: false,
-      },
-      {
-        text: "Giặc nội xâm",
-        rationale: "Đúng. Người ví đây là kẻ thù nguy hiểm từ bên trong.",
+        text: "Hội nghị lần thứ 24.",
+        rationale:
+          "Đúng. Hội nghị Trung ương 24 (8/1975) nêu rõ chủ trương hoàn thành thống nhất và đưa cả nước tiến lên Chủ nghĩa xã hội.",
         isCorrect: true,
       },
       {
-        text: "Thói quen xấu của cán bộ",
-        rationale: "Sai. Cách nói giản lược, không đúng bản chất nghiêm trọng.",
+        text: "Hội nghị lần thứ 21.",
+        rationale:
+          "Sai. Hội nghị Trung ương 21 (7/1973) tập trung vấn đề miền Nam sau Hiệp định Paris.",
+        isCorrect: false,
+      },
+      {
+        text: "Hội nghị lần thứ 25.",
+        rationale: "Sai. Không phải mốc nêu chủ trương này.",
+        isCorrect: false,
+      },
+      {
+        text: "Hội nghị lần thứ 23.",
+        rationale: "Sai. Không khớp với chủ trương trong câu hỏi.",
         isCorrect: false,
       },
     ],
-    hint: "Người gọi đây là 'giặc'.",
+    hint: "Con số '24' gắn với 8/1975.",
+    source: "Giáo trình VNR202 – Chương 3: Hội nghị Trung ương 24 (8/1975)",
   },
   {
     questionNumber: 3,
-    question: "Theo tư tưởng Hồ Chí Minh, cán bộ nhà nước phải được xem là gì?",
+    question:
+      'Sự kiện nào đánh dấu hoàn thành thống nhất về mặt nhà nước và thông qua tên gọi "Cộng hòa Xã hội chủ nghĩa Việt Nam"?',
     imageUrl: null,
     answerOptions: [
       {
-        text: "Người quản lý nhân dân",
-        rationale: "Sai. Không phải đứng 'trên' dân.",
-        isCorrect: false,
-      },
-      {
-        text: "Người chủ của dân",
-        rationale: "Sai. Nhân dân mới là chủ.",
-        isCorrect: false,
-      },
-      {
-        text: "Người thay mặt Đảng điều hành xã hội",
-        rationale: "Sai. Không phản ánh đầy đủ tinh thần 'vì dân'.",
-        isCorrect: false,
-      },
-      {
-        text: "Công bộc của dân",
-        rationale: "Đúng. Cán bộ là đầy tớ, công bộc phục vụ Nhân dân.",
+        text: "Kỳ họp thứ nhất Quốc hội khóa VI (7/1976).",
+        rationale:
+          "Đúng. Quốc hội khóa VI đã quyết định tên nước, quốc kỳ, quốc huy, quốc ca, thủ đô…",
         isCorrect: true,
       },
+      {
+        text: "Tổng tuyển cử bầu Quốc hội chung cho cả nước (4/1976).",
+        rationale:
+          "Sai. Tổng tuyển cử là tiền đề; tên nước được thông qua tại kỳ họp 7/1976.",
+        isCorrect: false,
+      },
+      {
+        text: "Hội nghị Hiệp thương chính trị (11/1975).",
+        rationale:
+          "Sai. Hiệp thương tạo cơ sở chính trị–pháp lý, chưa hoàn tất tên nước.",
+        isCorrect: false,
+      },
+      {
+        text: "Đại hội đại biểu toàn quốc lần thứ IV (12/1976).",
+        rationale:
+          "Sai. Đại hội IV tổng kết và đề ra đường lối; tên nước đã được Quốc hội thông qua trước đó.",
+        isCorrect: false,
+      },
     ],
-    hint: "Từ khóa: công bộc.",
+    hint: "Nhớ mốc tháng 7/1976 của Quốc hội khóa VI.",
+    source:
+      "Giáo trình VNR202 – Chương 3: Quốc hội khóa VI, kỳ họp 1 (7/1976)",
   },
   {
     questionNumber: 4,
     question:
-      "Tại sao tham nhũng được coi là nguy cơ trực tiếp đe dọa sự tồn vong của Đảng và chế độ?",
+      "Đại hội đại biểu toàn quốc lần thứ IV (12-1976) quyết định đổi tên Đảng Lao động Việt Nam thành gì?",
     imageUrl: null,
     answerOptions: [
       {
-        text: "Vì làm giảm uy tín của cán bộ cấp cao",
-        rationale: "Sai. Chỉ là một phần ảnh hưởng.",
+        text: "Đảng Cộng sản Đông Dương.",
+        rationale: "Sai. Tên lịch sử thời kỳ trước 1945.",
         isCorrect: false,
       },
       {
-        text: "Vì chỉ gây thất thoát ngân sách",
-        rationale: "Sai. Hậu quả rộng hơn nhiều.",
-        isCorrect: false,
-      },
-      {
-        text: "Vì làm xói mòn niềm tin của nhân dân, làm mục ruỗng bộ máy, uy hiếp tính chính danh của chế độ",
-        rationale: "Đúng. Đây là tác động sâu rộng và nguy hiểm nhất.",
+        text: "Đảng Cộng sản Việt Nam.",
+        rationale: "Đúng. Đại hội IV khôi phục tên Đảng Cộng sản Việt Nam.",
         isCorrect: true,
       },
       {
-        text: "Vì chỉ xuất hiện ở một số lĩnh vực nhạy cảm",
-        rationale: "Sai. Có thể phát sinh ở nhiều lĩnh vực quyền lực.",
+        text: "Đảng Công Nông Việt Nam.",
+        rationale: "Sai. Không có quyết định đổi tên như vậy.",
+        isCorrect: false,
+      },
+      {
+        text: "Đảng Xã hội Việt Nam.",
+        rationale: "Sai. Không phải tổ chức cầm quyền.",
         isCorrect: false,
       },
     ],
-    hint: "Liên hệ tới niềm tin nhân dân.",
+    hint: "Tên Đảng hiện hành.",
+    source: "Giáo trình VNR202 – Chương 3: Đại hội IV (12/1976)",
   },
   {
     questionNumber: 5,
     question:
-      "Một trong những yêu cầu cấp bách để phòng, chống tham nhũng theo tư tưởng Hồ Chí Minh là gì?",
+      "Về đường lối kinh tế tại Đại hội IV (12-1976), Đảng xác định ưu tiên nào?",
     imageUrl: null,
     answerOptions: [
       {
-        text: "Chỉ dựa vào cơ quan thanh tra, kiểm toán",
-        rationale: "Sai. Không đủ, cần sức dân.",
+        text: "Ưu tiên công nghiệp nhẹ trên cơ sở nông nghiệp.",
+        rationale: "Sai. Đây không phải trọng tâm Đại hội IV.",
         isCorrect: false,
       },
       {
-        text: "Huy động nhân dân tham gia giám sát, bảo vệ người tố cáo",
+        text: "Ưu tiên nông nghiệp là mặt trận hàng đầu.",
         rationale:
-          "Đúng. Phát huy quyền làm chủ của Nhân dân và bảo vệ người dũng cảm đấu tranh.",
+          "Sai một phần bối cảnh. Đại hội IV nhấn mạnh công nghiệp nặng trên cơ sở nông nghiệp & công nghiệp nhẹ.",
+        isCorrect: false,
+      },
+      {
+        text: "Ưu tiên công nghiệp nặng hợp lý trên cơ sở phát triển nông nghiệp và công nghiệp nhẹ.",
+        rationale:
+          "Đúng. Mục tiêu xây dựng cơ sở vật chất kỹ thuật, lấy công nghiệp nặng làm trọng tâm (một cách hợp lý).",
         isCorrect: true,
       },
       {
-        text: "Chỉ tăng cường xử lý bằng pháp luật",
-        rationale: "Sai. Phòng ngừa và giám sát xã hội cũng rất quan trọng.",
-        isCorrect: false,
-      },
-      {
-        text: "Chỉ tập trung vào việc phòng ngừa trong cơ quan trung ương",
-        rationale: "Sai. Cần đồng bộ từ trung ương đến cơ sở.",
+        text: "Phát triển kinh tế tư nhân và kinh tế quốc doanh.",
+        rationale:
+          "Sai về cách diễn đạt trọng tâm trong văn kiện Đại hội IV thời điểm đó.",
         isCorrect: false,
       },
     ],
-    hint: "Vai trò nhân dân là then chốt.",
+    hint: "Từ khóa: công nghiệp nặng (hợp lý).",
+    source: "Giáo trình VNR202 – Chương 3: Đường lối Đại hội IV",
   },
   {
     questionNumber: 6,
     question:
-      "Theo Hồ Chí Minh, cán bộ, đảng viên cần có những yêu cầu gì để xây dựng Nhà nước trong sạch, vững mạnh?",
+      "Một hạn chế lớn của Đại hội IV (1976) khi xác định mục tiêu kinh tế là gì?",
     imageUrl: null,
     answerOptions: [
       {
-        text: "Giữ đạo đức cách mạng, trung thành tuyệt đối, tu dưỡng chống chủ nghĩa cá nhân",
+        text: "Xác định nông nghiệp là mặt trận hàng đầu chưa hợp lý.",
         rationale:
-          "Đúng. Cốt lõi là đạo đức cách mạng: cần, kiệm, liêm, chính, chí công vô tư.",
+          "Sai. Đại hội IV không đặt nông nghiệp là mặt trận hàng đầu như Đại hội V sau này nhấn mạnh.",
+        isCorrect: false,
+      },
+      {
+        text: "Coi nhẹ nhiệm vụ củng cố quốc phòng an ninh.",
+        rationale: "Sai. Đại hội IV không coi nhẹ Quốc phòng – An ninh.",
+        isCorrect: false,
+      },
+      {
+        text: "Nóng vội dự kiến hoàn thành cơ bản chuyển từ sản xuất nhỏ lên sản xuất lớn xã hội chủ nghĩa trong ~20 năm.",
+        rationale:
+          "Đúng. Đây là biểu hiện duy ý chí, dự báo thời gian quá ngắn so với thực tế.",
         isCorrect: true,
       },
       {
-        text: "Chỉ cần tuân thủ pháp luật",
-        rationale: "Sai. Cần cả tự giác, đạo đức và nêu gương.",
-        isCorrect: false,
-      },
-      {
-        text: "Tập trung phát triển kinh tế, không quan tâm đạo đức",
-        rationale: "Sai. Đạo đức là gốc.",
-        isCorrect: false,
-      },
-      {
-        text: "Thường xuyên đi công tác nước ngoài",
-        rationale: "Sai. Không liên quan tiêu chí trong sạch, vững mạnh.",
+        text: "Chưa chú trọng phát triển khoa học – kỹ thuật.",
+        rationale:
+          "Sai. Văn kiện có đề cập Khoa học – Kỹ thuật, hạn chế chính nằm ở dự báo duy ý chí.",
         isCorrect: false,
       },
     ],
-    hint: "Cần, kiệm, liêm, chính, chí công vô tư.",
+    hint: "Điểm 'duy ý chí' về mốc thời gian.",
+    source: "Giáo trình VNR202 – Chương 3: Đánh giá Đại hội IV",
   },
   {
     questionNumber: 7,
     question:
-      "Hồ Chí Minh coi bệnh đặc quyền, đặc lợi, tham ô, lãng phí, quan liêu là gì?",
+      'Sự kiện nào được coi là "bước đột phá đầu tiên" trong quá trình tìm tòi đổi mới kinh tế (1975–1986)?',
     imageUrl: null,
     answerOptions: [
       {
-        text: "Vấn đề nhỏ cần quan tâm",
-        rationale: "Sai. Đây là nguy cơ nghiêm trọng.",
+        text: "Chỉ thị 100 Trung ương (1/1981).",
+        rationale:
+          "Sai. Chỉ thị 100 rất quan trọng nhưng 'đột phá đầu' thường gắn với Hội nghị Trung ương 6 khóa IV (1979).",
         isCorrect: false,
       },
       {
-        text: "Giặc nội xâm, những xấu xa của chế độ cũ",
+        text: "Hội nghị Trung ương 6 khóa IV (8/1979).",
         rationale:
-          "Đúng. Chúng phá hoại từ bên trong nếu không kiên quyết đấu tranh.",
+          "Đúng. Hội nghị Trung ương 6 (1979) chủ trương tháo gỡ để 'sản xuất bung ra'.",
         isCorrect: true,
       },
       {
-        text: "Chỉ là sai lầm hành chính",
-        rationale: "Sai. Tác hại sâu rộng hơn hành chính thuần túy.",
+        text: "Hội nghị Trung ương 8 khóa V (6/1985).",
+        rationale:
+          "Sai. Đây thường được coi là 'đột phá thứ hai' về giá–lương–tiền.",
         isCorrect: false,
       },
       {
-        text: "Không đáng lo ngại",
-        rationale: "Sai. Rất đáng lo và phải chống kiên quyết.",
+        text: "Đại hội V (3/1982).",
+        rationale: "Sai. Đại hội V tổng kết và điều chỉnh, không là 'đột phá đầu'.",
         isCorrect: false,
       },
     ],
-    hint: "Người gọi đây là giặc nội xâm.",
+    hint: "Nhớ mốc 1979 và cụm 'bung ra'.",
+    source: "Giáo trình VNR202 – Chương 3: Hội nghị Trung ương 6 (8/1979)",
   },
   {
     questionNumber: 8,
     question:
-      "Trong công tác xây dựng Đảng hiện nay, những vấn đề nào cần đặc biệt quan tâm?",
+      "Mục đích chủ yếu của Hội nghị Trung ương 6 (8/1979) khi khắc phục khuyết điểm trong quản lý kinh tế là gì?",
     imageUrl: null,
     answerOptions: [
       {
-        text: "Chống suy thoái chính trị, đạo đức, lối sống; công tác cán bộ và kiểm soát nội bộ",
+        text: "Tập trung vốn cho công trình trọng điểm.",
         rationale:
-          "Đúng. Đây là trọng tâm, then chốt để giữ Đảng trong sạch, vững mạnh.",
+          "Sai. Không phải ý chính được nhấn mạnh như một 'đột phá'.",
+        isCorrect: false,
+      },
+      {
+        text: "Phá bỏ rào cản để cho 'sản xuất bung ra'.",
+        rationale:
+          "Đúng. Trọng tâm là tháo gỡ cơ chế kìm hãm để thúc đẩy sản xuất.",
         isCorrect: true,
       },
       {
-        text: "Chỉ quan tâm kinh tế",
-        rationale: "Sai. Xây dựng Đảng không thể giản lược như vậy.",
+        text: "Hoàn thành cải tạo xã hội chủ nghĩa ở miền Nam.",
+        rationale: "Sai. Không phải mục đích trọng tâm của Hội nghị Trung ương 6 (1979).",
         isCorrect: false,
       },
       {
-        text: "Tập trung phát triển công nghệ",
-        rationale:
-          "Sai. Công nghệ quan trọng nhưng không thay thế xây dựng Đảng.",
-        isCorrect: false,
-      },
-      {
-        text: "Hạn chế kiểm tra giám sát",
-        rationale: "Sai. Cần tăng cường kiểm tra, giám sát.",
+        text: "Đổi mới công tác cán bộ.",
+        rationale: "Sai. Đây không phải trục chính của quyết sách kinh tế Hội nghị.",
         isCorrect: false,
       },
     ],
-    hint: "Đảng nhấn mạnh chính trị, đạo đức, kiểm soát.",
+    hint: "Cụm từ 'sản xuất bung ra'.",
+    source: "Giáo trình VNR202 – Chương 3: Nội dung Hội nghị Trung ương 6 (1979)",
   },
   {
     questionNumber: 9,
     question:
-      "Khi xây dựng Nhà nước ngang tầm nhiệm vụ trong giai đoạn cách mạng mới, cần đảm bảo những nội dung nào?",
+      "Chỉ thị 100 Trung ương (1/1981) về khoán sản phẩm trong Hợp tác xã nông nghiệp quy định trọng tâm nào?",
     imageUrl: null,
     answerOptions: [
       {
-        text: "Chỉ tập trung phát triển kinh tế",
-        rationale: "Sai. Cần hoàn thiện thể chế, pháp quyền.",
+        text: "Xã viên được giao khoán và tự do định giá sản phẩm.",
+        rationale:
+          "Sai. Cơ chế giá còn chịu quản lý; không 'tự do định giá' đầy đủ.",
         isCorrect: false,
       },
       {
-        text: "Xây dựng Nhà nước pháp quyền XHCN trong sạch, vững mạnh; hoàn thiện pháp luật và kiểm soát quyền lực",
+        text: "Xã viên nhận mức khoán theo diện tích, tự làm các khâu cấy, chăm sóc, thu hoạch.",
         rationale:
-          "Đúng. Pháp quyền, minh bạch, kiểm soát quyền lực là trụ cột.",
+          "Đúng. Khoán đến nhóm/người lao động gắn với diện tích, sản lượng và trách nhiệm.",
         isCorrect: true,
       },
       {
-        text: "Không cần minh bạch thủ tục hành chính",
-        rationale: "Sai. Minh bạch là điều kiện then chốt.",
+        text: "Hợp tác xã chỉ làm đất và thủy lợi.",
+        rationale:
+          "Sai. Hợp tác xã vẫn giữ nhiều khâu tổ chức – dịch vụ, không chỉ 2 khâu.",
         isCorrect: false,
       },
       {
-        text: "Giảm quyền dân tham gia",
-        rationale: "Sai. Phải phát huy quyền làm chủ của Nhân dân.",
+        text: "Sản lượng vượt khoán phải nộp lại 50% cho Hợp tác xã.",
+        rationale:
+          "Sai. Quy định vượt khoán được hưởng khuyến khích, không phải mẫu số 50% cố định.",
         isCorrect: false,
       },
     ],
-    hint: "Pháp quyền, pháp luật, kiểm soát quyền lực.",
+    hint: "Từ khóa: khoán đến nhóm/người và diện tích.",
+    source: "Giáo trình VNR202 – Chương 3: Chỉ thị 100 (1/1981)",
   },
   {
     questionNumber: 10,
-    question: "Tham nhũng xảy ra ở đâu và do ai thực hiện?",
+    question:
+      "Đại hội V (3-1982) bổ sung nhận thức nào về thời kỳ quá độ lên Chủ nghĩa xã hội ở Việt Nam?",
     imageUrl: null,
     answerOptions: [
       {
-        text: "Ở mọi nơi, do tất cả công dân",
-        rationale: "Sai. Không gắn với mọi công dân.",
+        text: "Khẳng định đã cơ bản hoàn thành thời kỳ quá độ.",
+        rationale: "Sai. Việt Nam còn ở giai đoạn đầu.",
         isCorrect: false,
       },
       {
-        text: "Chỉ ở cơ quan nhà nước, do người có chức vụ, quyền hạn lợi dụng chức vụ, quyền hạn",
+        text: "Khẳng định đang ở chặng đường đầu tiên của thời kỳ quá độ lên Chủ nghĩa xã hội.",
         rationale:
-          "Đúng. Tham nhũng gắn với người có chức vụ, quyền hạn trong khu vực công.",
+          "Đúng. Đại hội V xác định rõ ta đang ở chặng đầu của thời kỳ quá độ.",
         isCorrect: true,
       },
       {
-        text: "Chỉ trong doanh nghiệp tư nhân",
-        rationale: "Sai. Không phù hợp định nghĩa pháp lý ở VN.",
+        text: "Nhiệm vụ chính là thực hiện khoán sản phẩm trong nông nghiệp.",
+        rationale:
+          "Sai. Khoán sản phẩm quan trọng nhưng không phải 'nhận thức mới' trung tâm.",
         isCorrect: false,
       },
       {
-        text: "Chỉ xảy ra trong các cơ quan quốc tế",
-        rationale: "Sai.",
+        text: "Nhiệm vụ chính là xóa bỏ cơ chế bao cấp ngay lập tức.",
+        rationale:
+          "Sai. Đường lối chuyển đổi từng bước, chưa 'ngay lập tức'.",
         isCorrect: false,
       },
     ],
-    hint: "Tham nhũng gắn với quyền lực.",
+    hint: "Cụm: 'chặng đường đầu tiên'.",
+    source: "Giáo trình VNR202 – Chương 3: Đại hội V (3/1982)",
   },
   {
     questionNumber: 11,
     question:
-      "Vì sao Hồ Chí Minh coi tham ô, lãng phí, quan liêu là giặc nội xâm?",
+      "Trong chặng đường đầu tiên (Đại hội V), mặt trận hàng đầu cần tập trung phát triển mạnh mẽ là gì?",
     imageUrl: null,
     answerOptions: [
       {
-        text: "Vì chúng chỉ là những sai lầm hành chính nhỏ",
-        rationale: "Sai. Mức độ nghiêm trọng hơn nhiều.",
+        text: "Công nghiệp nặng và giao thông vận tải.",
+        rationale:
+          "Sai. Khác với định hướng Đại hội IV; Đại hội V điều chỉnh trọng tâm ngắn hạn.",
         isCorrect: false,
       },
       {
-        text: "Vì chúng nằm ngay trong tổ chức, làm thất thoát tài sản, băng hoại đạo đức và uy hiếp sự tồn vong của Đảng",
+        text: "Quốc phòng và an ninh.",
+        rationale: "Sai. Không phải 'mặt trận hàng đầu' kinh tế ở chặng đầu.",
+        isCorrect: false,
+      },
+      {
+        text: "Sản xuất nông nghiệp, hàng tiêu dùng và xuất khẩu.",
         rationale:
-          "Đúng. Nguy cơ từ bên trong, phá hoại cơ sở đạo đức và tổ chức.",
+          "Đúng. Đại hội V nhấn mạnh 3 chương trình: nông nghiệp, hàng tiêu dùng, xuất khẩu.",
         isCorrect: true,
       },
       {
-        text: "Vì chỉ xảy ra trong chế độ cũ",
-        rationale: "Sai. Có thể nảy sinh nếu không phòng ngừa.",
-        isCorrect: false,
-      },
-      {
-        text: "Vì chỉ làm giảm thu nhập của nhân dân",
-        rationale: "Sai. Tác hại vượt xa khía cạnh thu nhập.",
+        text: "Văn hóa, giáo dục và y tế.",
+        rationale:
+          "Sai. Đây là lĩnh vực quan trọng nhưng không là 'mặt trận hàng đầu' kinh tế lúc đó.",
         isCorrect: false,
       },
     ],
-    hint: "Người nói 'nằm ngay trong tổ chức ta'.",
+    hint: "Ba trụ: nông nghiệp – tiêu dùng – xuất khẩu.",
+    source: "Giáo trình VNR202 – Chương 3: Chủ trương Đại hội V",
   },
   {
     questionNumber: 12,
-    question: "Tham nhũng gây ra hậu quả gì cho xã hội và Nhà nước?",
+    question:
+      'Sự kiện nào được coi là "đột phá thứ hai" trong tìm tòi đổi mới kinh tế (khóa V)?',
     imageUrl: null,
     answerOptions: [
       {
-        text: "Chỉ làm chậm nhịp phát triển kinh tế",
-        rationale: "Sai. Ảnh hưởng cả chính trị, xã hội.",
+        text: "Hội nghị Trung ương 6 khóa IV (8/1979).",
+        rationale: "Sai. Đó là đột phá thứ nhất.",
         isCorrect: false,
       },
       {
-        text: "Làm thất thoát kinh tế, mất niềm tin của nhân dân, đe dọa sự tồn vong của Đảng và chế độ",
+        text: "Hội nghị Trung ương 7 khóa V (12/1984).",
+        rationale: "Sai. Không phải mốc 'đột phá thứ hai'.",
+        isCorrect: false,
+      },
+      {
+        text: "Hội nghị Trung ương 8 khóa V (6/1985).",
         rationale:
-          "Đúng. Tổng hợp cả tác hại kinh tế lẫn khủng hoảng niềm tin và tính chính danh.",
+          "Đúng. Đột phá về xoá bỏ cơ chế tập trung quan liêu bao cấp, lấy giá–lương–tiền làm khâu đột phá.",
         isCorrect: true,
       },
       {
-        text: "Chỉ ảnh hưởng đến một số cán bộ cấp cao",
-        rationale: "Sai. Ảnh hưởng rộng tới toàn hệ thống.",
-        isCorrect: false,
-      },
-      {
-        text: "Không gây tác động lâu dài",
-        rationale: "Sai. Tác động kéo dài và hệ lụy sâu.",
+        text: "Hội nghị Bộ Chính trị khóa V (8/1986).",
+        rationale:
+          "Sai. Thường được coi là đột phá thứ ba, mở đường Đại hội VI.",
         isCorrect: false,
       },
     ],
-    hint: "Hậu quả cả kinh tế lẫn chính trị.",
+    hint: "Nhớ mốc 6/1985 và 'giá–lương–tiền'.",
+    source: "Giáo trình VNR202 – Chương 3: Hội nghị Trung ương 8 (6/1985)",
   },
   {
     questionNumber: 13,
-    question: "Tham nhũng gây tác hại gì về mặt kinh tế?",
+    question:
+      'Nội dung cốt lõi của "đột phá thứ hai" (Hội nghị Trung ương 8, 6-1985) là gì?',
     imageUrl: null,
     answerOptions: [
       {
-        text: "Chỉ ảnh hưởng tới một số doanh nghiệp nhỏ",
-        rationale: "Sai. Tác động toàn bộ môi trường kinh doanh.",
+        text: "Tiếp tục đẩy mạnh cải tạo xã hội chủ nghĩa ở miền Nam.",
+        rationale: "Sai. Trọng tâm là cải cách cơ chế quản lý kinh tế.",
         isCorrect: false,
       },
       {
-        text: "Gây thất thoát, lãng phí nguồn lực quốc gia, làm chậm tốc độ tăng trưởng, méo mó môi trường kinh doanh",
+        text: "Tập trung vốn cho ba chương trình kinh tế lớn.",
         rationale:
-          "Đúng. Tạo chi phí 'ngầm', giảm hiệu quả phân bổ nguồn lực và cạnh tranh lành mạnh.",
+          "Sai. Ba chương trình là định hướng, không phải 'khâu đột phá' về cơ chế.",
+        isCorrect: false,
+      },
+      {
+        text: "Xoá bỏ cơ chế tập trung quan liêu bao cấp, lấy giá–lương–tiền làm khâu đột phá.",
+        rationale:
+          "Đúng. Đây là bước chuyển quan trọng về cơ chế quản lý kinh tế.",
         isCorrect: true,
       },
       {
-        text: "Không ảnh hưởng đến chi phí đầu tư, đấu thầu",
+        text: "Xóa hết trạm kiểm soát hàng hóa trên các tuyến.",
         rationale:
-          "Sai. Làm tăng chi phí không chính thức, méo cơ chế đấu thầu.",
-        isCorrect: false,
-      },
-      {
-        text: "Chỉ gây khó khăn trong quản lý hành chính",
-        rationale: "Sai. Ảnh hưởng vượt ra ngoài phạm vi quản trị.",
+          "Sai. Biện pháp hành chính không phải nội dung cốt lõi của đột phá.",
         isCorrect: false,
       },
     ],
-    hint: "Liên hệ chi phí ngầm trong đầu tư.",
+    hint: "Từ khóa: cơ chế & giá–lương–tiền.",
+    source: "Giáo trình VNR202 – Chương 3: Cải cách 'giá–lương–tiền' 1985",
   },
   {
     questionNumber: 14,
-    question: "Tham nhũng tác động như thế nào đến xã hội và chính trị?",
+    question:
+      'Hội nghị nào được coi là "đột phá thứ ba" và bước quyết định dẫn tới đường lối Đổi mới (Đại hội VI)?',
     imageUrl: null,
     answerOptions: [
       {
-        text: "Chỉ làm thay đổi chính sách hành chính",
-        rationale: "Sai. Tác động sâu tới đạo đức và tổ chức.",
+        text: "Hội nghị Trung ương 6 khóa IV (8/1979).",
+        rationale: "Sai. Đột phá thứ nhất.",
         isCorrect: false,
       },
       {
-        text: "Làm băng hoại đạo đức, tạo bất bình trong dân, khoét sâu khoảng cách giàu – nghèo, làm mục ruỗng bộ máy, suy thoái cán bộ, đảng viên, đe dọa sự tồn vong của Đảng và chế độ",
+        text: "Hội nghị Trung ương 8 khóa V (6/1985).",
+        rationale: "Sai. Đột phá thứ hai.",
+        isCorrect: false,
+      },
+      {
+        text: "Hội nghị Bộ Chính trị khóa V (8/1986).",
         rationale:
-          "Đúng. Đây là hệ quả xã hội–chính trị toàn diện và đặc biệt nghiêm trọng.",
+          "Đúng. Họp 8/1986 được xem là bước quyết định chín muồi tư duy đổi mới.",
         isCorrect: true,
       },
       {
-        text: "Chỉ ảnh hưởng tới cá nhân tham nhũng",
-        rationale: "Sai. Hậu quả lan tỏa trong toàn xã hội.",
-        isCorrect: false,
-      },
-      {
-        text: "Không gây tác động lâu dài",
-        rationale: "Sai. Di chứng kéo dài, khó khắc phục.",
+        text: "Hội nghị Trung ương 6 khóa V (7/1984).",
+        rationale: "Sai. Không phải 'đột phá thứ ba'.",
         isCorrect: false,
       },
     ],
-    hint: "Nhấn mạnh băng hoại đạo đức, mục ruỗng bộ máy.",
+    hint: "Mốc 8/1986 ngay trước Đại hội VI (12/1986).",
+    source: "Giáo trình VNR202 – Chương 3: Bối cảnh tiền Đại hội VI",
   },
   {
     questionNumber: 15,
-    question: "Giải pháp nào được nêu để ngăn chặn và đẩy lùi tham nhũng?",
+    question:
+      'Chủ trương quan trọng nhất của "đột phá thứ ba" (Bộ Chính trị khóa V, 8/1986) liên quan tới cơ cấu sản xuất là gì?',
     imageUrl: null,
     answerOptions: [
       {
-        text: "Chỉ tăng lương cho cán bộ để họ không tham nhũng",
-        rationale: "Sai. Không giải quyết gốc rễ quyền lực.",
+        text: "Ưu tiên đầu tư lớn cho công nghiệp nặng.",
+        rationale:
+          "Sai. Quan điểm lúc này điều chỉnh để giải quyết thiếu đói, hàng tiêu dùng.",
         isCorrect: false,
       },
       {
-        text: "Kiểm soát quyền lực, trách nhiệm người đứng đầu, cải cách hành chính, phát huy vai trò nhân dân, nêu gương cán bộ",
+        text: "Điều chỉnh lớn cơ cấu theo hướng lấy nông nghiệp là mặt trận hàng đầu, phát triển mạnh công nghiệp nhẹ; công nghiệp nặng có chọn lọc.",
         rationale:
-          "Đúng. Đồng bộ cơ chế kiểm soát – minh bạch – nêu gương – trách nhiệm giải trình.",
+          "Đúng. Đây là chuyển hướng quan trọng để thực tế hóa mục tiêu ổn định – phát triển.",
         isCorrect: true,
       },
       {
-        text: "Hạn chế dân giám sát, giảm minh bạch thủ tục",
-        rationale: "Sai. Đi ngược phòng, chống tham nhũng.",
+        text: "Hoàn thành cải tạo xã hội chủ nghĩa ở miền Nam trong 5 năm.",
+        rationale: "Sai. Không phản ánh trọng tâm cơ cấu sản xuất của đột phá.",
         isCorrect: false,
       },
       {
-        text: "Không cần xử lý nghiêm minh, chỉ nhắc nhở",
-        rationale: "Sai. Cần chế tài đủ sức răn đe, 'không có vùng cấm'.",
+        text: "Chuyển hẳn ngân hàng sang hạch toán kinh doanh xã hội chủ nghĩa.",
+        rationale:
+          "Sai. Hạch toán là nội dung cải cách, nhưng câu hỏi hỏi về cơ cấu sản xuất.",
         isCorrect: false,
       },
     ],
-    hint: "Kiểm soát quyền lực và vai trò nhân dân.",
+    hint: "Nông nghiệp – công nghiệp nhẹ, công nghiệp nặng có chọn lọc.",
+    source:
+      "Giáo trình VNR202 – Chương 3: Điều chỉnh cơ cấu 8/1986 và tiền Đổi mới",
   },
 ];
 
