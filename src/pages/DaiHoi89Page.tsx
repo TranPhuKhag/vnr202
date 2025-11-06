@@ -6,7 +6,7 @@ import aseanImage from "../assets/ASEAN.jpg";
 const DaiHoi89Page: React.FC = () => {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-gray-100 min-h-screen overflow-x-hidden">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16 pt-32">
         {/* Header */}
         <motion.header
           initial={{ opacity: 0, y: -50 }}
@@ -15,15 +15,17 @@ const DaiHoi89Page: React.FC = () => {
           className="text-center mb-20"
         >
           <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-cyan-600 mb-4">
-Đổi mới toàn diện, đưa đất nước ra khỏi khủng hoảng kinh tế - xã hội 1986 - 1996          </h1>
+            Đổi mới toàn diện, đưa đất nước ra khỏi khủng hoảng <br />  
+            kinh tế - xã hội 1986 - 1996
+          </h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-lg text-gray-600 max-w-3xl mx-auto"
           >
-            {/* Thời kỳ bản lề với những bước tiến vượt bậc trong hội nhập quốc tế */}
-            {/* và sự phát triển, hoàn thiện tư duy lý luận của Đảng. */}
+            Thời kỳ bản lề với những bước tiến vượt bậc trong hội nhập quốc tế
+            và sự phát triển, hoàn thiện tư duy lý luận của Đảng.
           </motion.p>
         </motion.header>
 
@@ -328,7 +330,7 @@ Lần đầu tiên Luật Đầu tư nước ngoài được Quốc hội thông
         {/* Section 4: Kết thúc giai đoạn */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
           <h2 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
-            <span className="text-2xl">�</span>
+            <span className="text-2xl"> </span>
             4. Kết thúc giai đoạn 1986–1996: Những thành tựu đạt được
           </h2>
 

@@ -126,7 +126,7 @@ const GiaiDoan2Page: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-b from-blue-50 to-gray-100 min-h-screen overflow-x-hidden">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16 pt-32">
         {/* Header */}
         <motion.header
           initial={{ opacity: 0, y: -50 }}

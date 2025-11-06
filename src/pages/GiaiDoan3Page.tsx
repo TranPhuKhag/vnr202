@@ -1,18 +1,12 @@
 import React from "react";
-import { motion, type Variants } from "framer-motion"; // Vẫn dùng motion cho hiệu ứng đơn giản
+import { motion, type Variants } from "framer-motion";
 import {
-  FaBullseye,
-  FaBalanceScale,
   FaUsers,
   FaGavel,
   FaBookOpen,
   FaShieldAlt,
-  FaChartLine,
   FaCogs,
   FaUserTie,
-  FaCamera,
-  FaRoad,
-  FaIndustry,
 } from "react-icons/fa";
 
 // Thêm 3 ảnh của bạn
@@ -31,25 +25,6 @@ const itemScaleVariants: Variants = {
     transition: { type: "spring", stiffness: 100 },
   },
 };
-
-/**
- * Component giữ chỗ cho hình ảnh
- */
-const ImagePlaceholder: React.FC<{
-  suggestion: string;
-  className?: string;
-  icon?: React.ReactNode;
-}> = ({ suggestion, className = "min-h-[300px]", icon }) => (
-  <div
-    className={`flex flex-col items-center justify-center bg-gray-100/80 border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center text-gray-500 ${className}`}
-  >
-    {icon || <FaCamera className="text-5xl mb-4 text-gray-400" />}
-    <span className="font-semibold text-sm">
-      Gợi ý hình ảnh (Không trùng lặp):
-    </span>
-    <span className="text-sm italic">{suggestion}</span>
-  </div>
-);
 
 /**
  * Component cho bố cục xen kẽ (Ảnh trái / Text phải hoặc ngược lại)
