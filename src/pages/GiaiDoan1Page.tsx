@@ -11,6 +11,9 @@ import {
   FaLightbulb,
 } from "react-icons/fa";
 
+import dh8 from "../assets/ĐH8.png";
+import dh9 from "../assets/ĐH9.jpg";
+
 const Card = ({ icon, title, children, className }: { icon: React.ReactNode; title: string; children: React.ReactNode; className?: string }) => (
   <motion.div
     whileHover={{ y: -8, boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)" }}
@@ -124,7 +127,7 @@ const GiaiDoan1Page: React.FC = () => {
               </div>
             </div>
             <div className="flex justify-center items-stretch" style={{marginTop: '70px'}}>
-              <img src="/src/assets/ĐH8.png" alt="Đại hội VIII" className="rounded-3xl shadow-2xl w-full max-w-xl object-cover border-4 border-blue-200 h-full min-h-[700px]" style={{height: '780px', minWidth: '700px', objectFit: 'fill'}} />
+              <img src={dh8} alt="Đại hội VIII" className="rounded-3xl shadow-2xl w-full max-w-xl object-cover border-4 border-blue-200 h-full min-h-[700px]" style={{height: '780px', minWidth: '700px', objectFit: 'fill'}} />
             </div>
           </div>
         </motion.section>
@@ -138,7 +141,7 @@ const GiaiDoan1Page: React.FC = () => {
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center items-center" style={{marginTop: '70px'}}>
-              <img src="/src/assets/ĐH9.jpg" alt="Đại hội IX" className="rounded-3xl shadow-2xl w-full max-w-md object-cover border-4 border-blue-200" style={{height: '890px', minWidth: '700px', objectFit: 'fill'}}/>
+              <img src={dh9} alt="Đại hội IX" className="rounded-3xl shadow-2xl w-full max-w-md object-cover border-4 border-blue-200" style={{height: '890px', minWidth: '700px', objectFit: 'fill'}}/>
             </div>
             <div>
               <div className="flex items-center mb-8">
