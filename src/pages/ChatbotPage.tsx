@@ -1,20 +1,15 @@
+// src/pages/ChatbotPage.tsx
 import React from "react";
-import { motion } from "framer-motion";
+// Không cần motion ở đây nữa
 import VoiceChatbot from "../components/VoiceChatbot";
 
 const ChatbotPage: React.FC = () => (
   <div className="min-h-screen flex flex-col items-center justify-center bg-[#f4f7ff] py-10 px-2">
-    <div className="w-full max-w-2xl bg-white/90 rounded-2xl shadow-xl p-6 md:p-10">
-      <motion.h2
-        className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#2a2e6e] via-[#6e7fdc] to-[#3a3f8f] mb-8 text-center drop-shadow"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        Chatbot hỏi đáp Lịch sử Đảng Cộng Sản Việt Nam
-      </motion.h2>
-      <VoiceChatbot />
-    </div>
+    {/* Đã loại bỏ thẻ div "w-full max-w-2xl bg-white/90..."
+      và tiêu đề motion.h2 khỏi đây.
+      Chúng ta để component VoiceChatbot tự quản lý thẻ (card) của nó.
+    */}
+    <VoiceChatbot />
   </div>
 );
 

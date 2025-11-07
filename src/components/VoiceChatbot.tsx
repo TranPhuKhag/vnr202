@@ -50,7 +50,7 @@ const VoiceChatbot: React.FC = () => {
 
   const baseGuidelines = `
 Bạn là trợ lý học thuật cho *môn Lịch sử Đảng Cộng Sản Việt Nam*. 
-• Cơ sở tham chiếu chính: **Giáo trình Tư tưởng Hồ Chí Minh 2019**.
+• Cơ sở tham chiếu chính: **giáo trình lịch sử đảng cộng sản việt nam 2021**.
 • Nếu câu hỏi nằm ngoài giáo trình, hãy trả lời ngắn gọn theo kiến thức nền tảng, và nói rõ là “nội dung ngoài giáo trình”. Nếu không chắc chắn thì nói “mình chưa có đủ căn cứ trong giáo trình”.
 • Không bịa đặt, không suy diễn quá mức, không đưa số liệu/ trích dẫn nếu không chắc chắn.
 • Trả lời hoàn toàn bằng **tiếng Việt**, ưu tiên **ngắn gọn – súc tích – dễ hiểu**, dùng **Markdown** gọn gàng.
@@ -131,8 +131,8 @@ ${input}
           Chatbot AI – Lịch sử Đảng Cộng Sản Việt Nam
         </h2>
         <p className="text-center text-gray-500 text-sm mb-4">
-          Ưu tiên trả lời theo <i>Lịch sử Đảng Cộng Sản Việt Nam</i>; có thể
-          nêu rõ Chương/Mục khi trích dẫn.
+          Ưu tiên trả lời theo <i>Lịch sử Đảng Cộng Sản Việt Nam</i>; có thể nêu
+          rõ Chương/Mục khi trích dẫn.
         </p>
 
         <div className="flex gap-4 mb-6 justify-center">
