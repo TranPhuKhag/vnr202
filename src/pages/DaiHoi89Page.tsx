@@ -75,7 +75,7 @@ const DaiHoi89Page: React.FC = () => {
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
                   <span>
-                    Lạm phát cao kinh dị, sản xuất đình đốn, đời sống nhân dân vô cùng
+                    Lạm phát cao, các hiện tượng tiêu cực, đời sống nhân dân vô cùng
                     khó khăn.
                   </span>
                 </li>

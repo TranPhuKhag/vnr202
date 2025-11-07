@@ -8,32 +8,24 @@ const aiApplications = [
   {
     title: "Sinh bộ Quiz theo đề cương học phần",
     content:
-      "AI tạo nhanh 15+ câu trắc nghiệm kèm gợi ý và giải thích, bao phủ các chủ đề: cơ sở hình thành tư tưởng Hồ Chí Minh; độc lập dân tộc gắn liền CNXH; đại đoàn kết toàn dân tộc; xây dựng Đảng & Nhà nước; đạo đức cách mạng; vận dụng thực tiễn và liên hệ hiện nay.",
+      "AI tạo nhanh 15+ câu trắc nghiệm kèm gợi ý và giải thích, bao phủ các chủ đề: thuyết trình",
   },
   {
     title: "Chatbot hỏi–đáp giáo trình & văn kiện",
     content:
-      "Chatbot hỗ trợ tra cứu khái niệm, luận điểm then chốt và trích dẫn tiêu biểu (như “cần, kiệm, liêm, chính, chí công vô tư”, “giặc nội xâm”); có thể trả lời dạng văn bản và giọng nói (Text-to-Speech) để tăng tương tác tự học.",
+      "Chatbot hỗ trợ tra cứu khái niệm, luận điểm then chốt có thể trả lời dạng văn bản và giọng nói (Text-to-Speech) để tăng tương tác tự học.",
   },
   {
     title: "Tóm tắt & bản đồ khái niệm chương mục",
     content:
-      "AI giúp tóm tắt mỗi chương, tạo “mind map/logic map” thể hiện mối liên hệ giữa các luận điểm: từ mục tiêu độc lập dân tộc gắn CNXH đến phương thức thực hiện qua đại đoàn kết, xây dựng Đảng trong sạch, Nhà nước của dân, do dân, vì dân.",
+      "AI giúp tóm tắt mỗi chương, tạo “mind map/logic map” thể hiện mối liên hệ giữa các luận điểm ",
   },
+  
+
   {
-    title: "Phân tích đạo đức cách mạng & tự rèn luyện",
+    title: "Hỗ trợ thiết kế sản phẩm",
     content:
-      "Tạo checklist tự đánh giá theo các phẩm chất: cần–kiệm–liêm–chính–chí công vô tư; cơ chế nhắc nhở thói quen tốt; gợi ý tình huống/ví dụ thực tế để người học luyện phản biện và liên hệ bản thân.",
-  },
-  {
-    title: "Vận dụng vào thực tiễn hiện nay",
-    content:
-      "Gợi ý tình huống học thuật/thực tiễn (chống tham nhũng, nêu gương cán bộ, phát huy dân chủ, đoàn kết quốc tế) để người học áp dụng phương pháp tư duy và nguyên tắc của tư tưởng Hồ Chí Minh vào bối cảnh đổi mới.",
-  },
-  {
-    title: "Cá nhân hóa lộ trình ôn tập",
-    content:
-      "Theo dõi kết quả làm quiz để đề xuất phần đọc bổ sung, flashcards trọng tâm từng mục (đại đoàn kết, vai trò Đảng, Nhà nước pháp quyền XHCN), giúp ôn thi hiệu quả và có hệ thống.",
+      "AI hỗ trợ giảng viên thiết kế các sản phẩm học tập số như hình ảnh, infographics, video ngắn tóm tắt nội dung chính.",
   },
 ];
 
