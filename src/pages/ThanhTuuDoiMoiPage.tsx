@@ -92,21 +92,21 @@ const ThanhTuuDoiMoiPage: React.FC = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-center mb-16 pt-24 pb-8 bg-gradient-to-br from-yellow-50 to-orange-100"
+        className="text-center mb-16 pt-24 pb-8 bg-gradient-to-br"
       >
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-indigo-700 mb-6">
+          <h1 className="text-5xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-indigo-700 mb-6" style={{height: "100px"}}>
             Thành tựu vĩ đại của công cuộc Đổi Mới
           </h1>
           <motion.blockquote
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-xl md:text-2xl italic text-gray-800 max-w-4xl mx-auto font-medium"
+            className="relative border-l-8 border-blue-400 italic text-gray-800 p-8 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl shadow-2xl mb-12 text-2xl font-semibold max-w-3xl mx-auto"
           >
-            "Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín
-            quốc tế như ngày nay."
-            <cite className="block text-right mt-2 not-italic font-semibold text-gray-600 text-lg">
+            <span className="absolute top-2 left-2 text-6xl text-blue-200 font-serif select-none">“</span>
+            Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay.
+            <cite className="block text-right mt-4 not-italic font-bold text-blue-600 text-lg">
               - Tổng Bí thư Nguyễn Phú Trọng
             </cite>
           </motion.blockquote>

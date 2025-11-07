@@ -7,7 +7,7 @@ interface QuizQuestion {
   imageUrl?: string | null;
   answerOptions: {
     text: string;
-    rationale: string; // nêu rõ vì sao đúng/sai
+    rationale: string;
     isCorrect: boolean;
   }[];
   hint: string;
@@ -509,14 +509,14 @@ const questions: QuizQuestion[] = [
   },
 ];
 
+const shapeColors = ["bg-red-500", "bg-blue-500", "bg-yellow-400", "bg-green-500"];
+
 const Quiz: React.FC = () => {
   const [current, setCurrent] = useState(0);
-  const [selected, setSelected] = useState<null | number>(null);
+  const [selected, setSelected] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [score, setScore] = useState(0);
-  const [answers, setAnswers] = useState<(number | null)[]>(
-    Array(questions.length).fill(null)
-  );
+  const [answers, setAnswers] = useState<(number | null)[]>(Array(questions.length).fill(null));
   const [showHint, setShowHint] = useState(false);
 
   const handleAnswer = (idx: number) => {
@@ -554,63 +554,61 @@ const Quiz: React.FC = () => {
     setAnswers(Array(questions.length).fill(null));
   };
 
-  const isAnswered = answers[current] !== null;
-  const isCorrectAnswer =
-    answers[current] !== null &&
-    questions[current]?.answerOptions[answers[current] as number]?.isCorrect;
+  const findCorrectAnswerIndex = (q: QuizQuestion) => q.answerOptions.findIndex((o) => o.isCorrect);
 
-  const findCorrectAnswerIndex = (q: QuizQuestion) =>
-    q.answerOptions.findIndex((opt) => opt.isCorrect);
+  const currentQ = questions[current];
+  const isAnswered = answers[current] !== null;
+  const isCorrectAnswer = isAnswered && currentQ.answerOptions[answers[current] as number]?.isCorrect;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#f4f7ff] py-10 px-2">
+    <div className="min-h-screen flex flex-col items-center justify-center text-white font-sans p-4 relative overflow-hidden">
+      {/* Hiệu ứng background động */}
       <motion.div
-        className="w-full max-w-2xl bg-white/90 rounded-2xl shadow-xl p-6 md:p-10"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15),transparent_70%)]"
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      />
+
+      <motion.div
+        key={current}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        <h2 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#2a2e6e] via-[#6e7fdc] to-[#3a3f8f] mb-8 text-center drop-shadow">
-          Quiz ôn tập lý thuyết
-        </h2>
-
+        exit={{ opacity: 0, y: -40 }}
+        transition={{ duration: 0.6 }}
+        className="relative z-10 w-full max-w-3xl text-center bg-gray-100/90 text-black backdrop-blur-lg p-8 rounded-3xl shadow-2xl" style={{
+    boxShadow: "0 0 25px 5px rgba(0, 0, 0, 0.15)",
+  }}>
+        <h1 className="text-4xl font-extrabold mb-4 drop-shadow">🎯 Quiz Ôn Tập</h1>
         {current < questions.length ? (
           <>
-            <div className="text-lg font-medium mb-6 text-gray-800 text-center">
-              Câu {current + 1}/{questions.length}:<br />
-              <span className="font-semibold">
-                {questions[current].question}
-              </span>
+            <div className="text-xl font-semibold mb-6">
+              Câu {current + 1}/{questions.length}
             </div>
+            <div className="text-2xl font-bold mb-6">{currentQ.question}</div>
 
-            <div className="flex flex-col gap-3 mb-6">
-              {questions[current].answerOptions.map((opt, idx) => {
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              {currentQ.answerOptions.map((opt, idx) => {
                 const isSelected = selected === idx || answers[current] === idx;
-                const isCorrect = opt.isCorrect;
+                const correct = opt.isCorrect;
                 const showResult = showFeedback || isAnswered;
-                let btnClass = "";
+
+                let btnStyle = `${shapeColors[idx]} text-white hover:brightness-110`;
                 if (showResult) {
-                  if (isSelected && isCorrect)
-                    btnClass = "bg-green-500 text-white border-green-600";
-                  else if (isSelected && !isCorrect)
-                    btnClass = "bg-red-500 text-white border-red-600";
-                  else if (isCorrect)
-                    btnClass = "bg-green-100 border-green-400 text-green-700";
-                  else btnClass = "bg-blue-100 border-blue-300 text-blue-700";
-                } else {
-                  btnClass = isSelected
-                    ? "bg-blue-200 border-blue-400 text-blue-900"
-                    : "bg-blue-100 border-blue-300 text-blue-700 hover:bg-blue-200";
+                  if (isSelected && correct) btnStyle = "bg-green-500";
+                  else if (isSelected && !correct) btnStyle = "bg-red-500";
+                  else if (correct) btnStyle = "bg-green-400";
+                  else btnStyle = "bg-gray-400";
                 }
+
                 return (
                   <motion.button
                     key={idx}
-                    whileTap={{ scale: 0.97 }}
-                    className={`w-full px-4 py-3 rounded-lg text-lg font-medium border-2 shadow transition-all text-left ${btnClass}`}
-                    disabled={showResult}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => handleAnswer(idx)}
+                    disabled={showResult}
+                    className={`${btnStyle} py-6 rounded-2xl text-xl font-semibold flex items-center justify-center gap-2 transition-all shadow-lg`}
                   >
-                    {String.fromCharCode(65 + idx)}. {opt.text}
+                    {opt.text}
                   </motion.button>
                 );
               })}

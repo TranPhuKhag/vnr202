@@ -129,24 +129,47 @@ const GiaiDoan2Page: React.FC = () => {
       <div className="container mx-auto px-4 py-16 pt-32">
         {/* Header */}
         <motion.header
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-20"
-        >
-          <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-cyan-600 mb-4">
-            Giai đoạn 2: Hội nhập & Hoàn thiện Lý luận (2006–2011)
-          </h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
-          >
-            Thời kỳ bản lề với những bước tiến vượt bậc trong hội nhập quốc tế
-            và sự phát triển, hoàn thiện tư duy lý luận của Đảng.
-          </motion.p>
-        </motion.header>
+                  initial={{ opacity: 0, y: -40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="text-center mb-20"
+                >
+                  <h1 className="text-xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-cyan-600" style={{height: "50px"}}>
+                           Giai đoạn 2: Hội nhập & Hoàn thiện Lý luận (2006 – 2011)
+                  </h1>
+                
+                  {/* Timeline */}
+                  <div className="relative flex justify-between items-center max-w-5xl mx-auto py-12">
+                    {/* Đường kẻ chính */}
+                    <div className="absolute top-1/2 left-0 w-full h-[6px] bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 rounded-full -translate-y-1/2 shadow-lg"></div>
+                    {/* Mốc năm */}
+                    {[{ year: 2006, label: "Đại hội X" }, { year: 2011, label: "Đại hội XI" }].map((item, index) => (
+                      <motion.div
+                        key={item.year}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 + index * 0.2 }}
+                        className="relative flex flex-col items-center z-10"
+                      >
+                        {/* Điểm tròn lớn */}
+                        <div className="w-10 h-10 bg-white border-4 border-blue-600 rounded-full shadow-xl flex items-center justify-center">
+                          <div className="w-5 h-5 bg-blue-500 rounded-full"></div>
+                        </div>
+                        {/* Năm */}
+                        <span className="mt-4 text-lg md:text-xl font-extrabold text-blue-800 drop-shadow-lg">
+                          {item.year}
+                        </span>
+                        {/* Nhãn sự kiện */}
+                        <span className="text-sm text-cyan-700 mt-1 font-semibold bg-cyan-50 px-3 py-1 rounded-full shadow">
+                          {item.label}
+                        </span>
+                      </motion.div>
+                    ))}
+                    {/* Hiệu ứng ánh sáng */}
+                    <div className="absolute left-1/4 top-1/2 w-24 h-24 bg-cyan-300 opacity-30 rounded-full blur-2xl -translate-y-1/2"></div>
+                    <div className="absolute right-1/4 top-1/2 w-24 h-24 bg-blue-300 opacity-30 rounded-full blur-2xl -translate-y-1/2"></div>
+                  </div>
+                </motion.header>
 
         {/* Section 1: Đại hội X */}
         <motion.section

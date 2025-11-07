@@ -64,21 +64,48 @@ const GiaiDoan3Page: React.FC = () => {
     // Đảm bảo có padding top để không bị Header che
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-100 text-gray-800 font-sans pt-24">
       <main className="max-w-7xl mx-auto p-4 sm:p-8">
-        {/* --- 1. Header --- */}
-        {/* Dùng motion.div đơn giản để apply hiệu ứng lúc tải trang, không ẩn khi cuộn */}
-        <motion.div
-          initial={{ opacity: 0, y: -30 }} // Mờ và hơi nâng lên
-          animate={{ opacity: 1, y: 0 }} // Hiện rõ và đi xuống
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-          className="text-center mb-20"
-        >
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700 tracking-tight">
-            Giai đoạn 3: Đột phá Chiến lược và Chỉnh đốn Đảng
-          </h1>
-          <p className="text-xl text-gray-600 mt-2 font-semibold">
-            (2011–2018)
-          </p>
-        </motion.div>
+       <motion.header
+                         initial={{ opacity: 0, y: -40 }}
+                         animate={{ opacity: 1, y: 0 }}
+                         transition={{ duration: 0.8, ease: "easeOut" }}
+                         className="text-center mb-20"
+                       >
+                         <h1 className="text-xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-cyan-600" style={{height: "50px"}}>
+                           Giai đoạn 3: Đột phá Chiến lược và Chỉnh đốn Đảng (2011 - 2018)
+                         </h1>
+                       
+                         {/* Timeline */}
+                         <div className="relative flex justify-between items-center max-w-5xl mx-auto py-12">
+                           {/* Đường kẻ chính */}
+                           <div className="absolute top-1/2 left-0 w-full h-[6px] bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 rounded-full -translate-y-1/2 shadow-lg"></div>
+                           {/* Mốc năm */}
+                           {[{ year: 2011, label: "Đại hội XI" }, { year: 2016, label: "Đại hội XII" }, { year: "2018" , label: "Tiếp diễn" }].map((item, index) => (
+                             <motion.div
+                               key={item.year}
+                               initial={{ opacity: 0, y: 20 }}
+                               animate={{ opacity: 1, y: 0 }}
+                               transition={{ delay: 0.3 + index * 0.2 }}
+                               className="relative flex flex-col items-center z-10"
+                             >
+                               {/* Điểm tròn lớn */}
+                               <div className="w-10 h-10 bg-white border-4 border-blue-600 rounded-full shadow-xl flex items-center justify-center">
+                                 <div className="w-5 h-5 bg-blue-500 rounded-full"></div>
+                               </div>
+                               {/* Năm */}
+                               <span className="mt-4 text-lg md:text-xl font-extrabold text-blue-800 drop-shadow-lg">
+                                 {item.year}
+                               </span>
+                               {/* Nhãn sự kiện */}
+                               <span className="text-sm text-cyan-700 mt-1 font-semibold bg-cyan-50 px-3 py-1 rounded-full shadow">
+                                 {item.label}
+                               </span>
+                             </motion.div>
+                           ))}
+                           {/* Hiệu ứng ánh sáng */}
+                           <div className="absolute left-1/4 top-1/2 w-24 h-24 bg-cyan-300 opacity-30 rounded-full blur-2xl -translate-y-1/2"></div>
+                           <div className="absolute right-1/4 top-1/2 w-24 h-24 bg-blue-300 opacity-30 rounded-full blur-2xl -translate-y-1/2"></div>
+                         </div>
+                       </motion.header>
 
         {/* --- 2. Khái quát --- */}
         {/* Gỡ bỏ toàn bộ `variants`, `initial`, `whileInView`, `viewport` */}
