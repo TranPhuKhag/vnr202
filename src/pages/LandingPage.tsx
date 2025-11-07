@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"; // Không cần AnimatePresence nữa
 
-import videoBg from "../assets/mln-bg-h264.mp4";
+import imgBg from "../assets/img-bg.png";
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -13,17 +13,12 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video nền */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
+      {/* Ảnh nền */}
+      <img
+        src={imgBg}
+        alt="Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src={videoBg} type="video/mp4" />
-      </video>
+      />
 
       {/* Overlay mờ */}
       <div className="absolute inset-0 bg-black/60 z-10" />
